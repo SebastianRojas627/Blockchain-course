@@ -1,0 +1,6 @@
+Contrato SIN view
+https://rinkeby.etherscan.io/tx/0xb9b8bd81512602be02a46387fd9947158597b4b372a2e7c169cef9d0f469d466
+
+
+Contrato CON view
+https://rinkeby.etherscan.io/tx/0xf7c8083a351699f41112a756b88a094becee73d2e60f256bb2ed3a3b0dffc69c
