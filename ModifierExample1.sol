@@ -1,6 +1,5 @@
 //SPDX-License-Identifier: GPL-3.0
 
-//Contract address: 0x69CFC520242C4A070dAbD31BCdC83a1BAfcCA4Ad
 pragma solidity ^0.8.0;
 
 contract ModifierExample {
