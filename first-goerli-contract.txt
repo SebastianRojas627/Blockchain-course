@@ -1,2 +1,0 @@
-First goerli contract link:
-0x85C39Cd840B8207e2370c002041Fcec40177e877
