@@ -30,7 +30,7 @@ contract Lottery {
     }
 
     modifier restricted() {
-        require(msg.sender == manager, "You are note the manager");
+        require(msg.sender == manager, "You are not the manager");
         _;
     }
 
