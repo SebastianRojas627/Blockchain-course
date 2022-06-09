@@ -43,7 +43,7 @@ contract("Lottery", accounts=> {
     it("only manager can pick a winner", async ()=> {
         
         try {
-            await instance.pickWinner({from: accounts[0]})
+            await instance.pickWinner({from: accounts[0]});
             assert(true) //fuerza que el test falle, con true fuerza que el test pase
         } catch (e) {
             assert.equal("You are not the manager", e.reason)
