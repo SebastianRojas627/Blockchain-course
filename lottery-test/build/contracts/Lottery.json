@@ -17,7 +17,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -36,14 +37,16 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
       "name": "enter",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -56,7 +59,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -76,7 +80,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"enter\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPlayers\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"manager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pickWinner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"players\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"random\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Lottery.sol\":\"Lottery\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Lottery.sol\":{\"keccak256\":\"0x68481fb866b8d945e72da108a8650f8630288d9afa28ba368d702c29c565baad\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://9ff14beb65f0aac672b304c6008560f0823bc6e94ab1760db7624eb364e7e18a\",\"dweb:/ipfs/QmSpU9Q1B26e2zWWXEV2zRdAV7HYpH9ADQKCii5hLfAs2L\"]}},\"version\":1}",
@@ -5623,12 +5628,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x256429348d4F0179e2716c33Ba1d0CEF76967Be7",
-      "transactionHash": "0xd5715bebc0880a7a39938a0f59e5ec6d41fdf91e81c4f0b839e3c18d087784fb"
+      "address": "0x16C779B21102f9A63CBA0C633Aa8c3e2948f87F5",
+      "transactionHash": "0x4ef9c863ce77c55a6869dd23efaeb5be67fd0fe7997f5f405396f7e4e0671790"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-08T17:36:25.351Z",
+  "updatedAt": "2022-06-09T16:41:52.740Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

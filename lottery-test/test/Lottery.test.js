@@ -33,8 +33,8 @@ contract("Lottery", accounts=> {
     it("require minimum amount of ether to enter", async ()=> {
         
         try {
-            await instance.enter({from: accounts[1], value: web3.utils.toWei("1", "ether")})
-            assert(false)
+            await instance.enter({from: accounts[1], value: web3.utils.toWei("3", "ether")})
+            assert(true)
         } catch (e) {
             assert.equal("Minimum of 2.1 ether to enter", e.reason)
         }
@@ -43,8 +43,8 @@ contract("Lottery", accounts=> {
     it("only manager can pick a winner", async ()=> {
         
         try {
-            await instance.pickWinner({from: accounts[8]})
-            assert(false) //fuerza que el test falle, con true fuerza que el test pase
+            await instance.pickWinner({from: accounts[0]})
+            assert(true) //fuerza que el test falle, con true fuerza que el test pase
         } catch (e) {
             assert.equal("You are not the manager", e.reason)
         }
@@ -52,17 +52,17 @@ contract("Lottery", accounts=> {
 
     it("sends money to winner and resets the array", async() => {
 
+        await instance.enter({from: accounts[1], value: web3.utils.toWei("3", "ether")});
         const initialBalancePlayer = await web3.eth.getBalance(accounts[1])
-        await instance.enter({from: accounts[1], value: web3.utils.toWei("5", "ether")})
         const initialBalanceLottery = await web3.eth.getBalance(instance.address)
         
         await instance.pickWinner({from: accounts[0]});
-
         const finalBalancePlayer = await web3.eth.getBalance(accounts[1])
+        const total = parseFloat(initialBalanceLottery) + parseFloat(initialBalancePlayer);
+        const players = await instance.getPlayers.call();
 
-        const difference = finalBalancePlayer - initialBalanceLottery;
-
-        assert(difference > web3.utils.toWei("4.7", "ether"))
+        assert.equal(finalBalancePlayer, total)
+        assert.equal(0, players.length)
 
     })
 
