@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Hi React, Truffle, Firebase
         </a>
       </header>
     </div>
