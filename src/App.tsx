@@ -16,7 +16,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
+<<<<<<< HEAD
           Hi React, Truffle, Firebase
+=======
+          Hi Truffle, React, Firebase
+>>>>>>> e23072ab45ec9629434ae2acdcdb080875edbbe2
         </a>
       </header>
     </div>

@@ -19,6 +19,7 @@ contract('Inbox', accounts => {
 
     });
 
+<<<<<<< HEAD
     it('setMessage should not change var message', async () => {
 
         try {
@@ -26,6 +27,15 @@ contract('Inbox', accounts => {
         await instance.setMessage('just Owner', {from: accounts[1]});
         } catch (e) {
             assert.equal(message, 'Only owner can access the message');
+=======
+    it('setMessage should not change var message', async  () => {
+
+        try {
+            const instance = await Inbox.deployed();
+            await instance.setMessage('just Owner', {from: accounts[0]});
+        } catch (e) {
+            assert.equal(e.reason , 'solo el Owner puede cambiar el mensaje.');
+>>>>>>> e23072ab45ec9629434ae2acdcdb080875edbbe2
         }
 
     })

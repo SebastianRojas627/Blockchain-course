@@ -121,5 +121,9 @@ module.exports = {
   contracts_build_directory: './ethereum/abis/',
   test_directory: './ethereum/test/',
   migrations_directory: './ethereum/migrations/'
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> e23072ab45ec9629434ae2acdcdb080875edbbe2
 };
