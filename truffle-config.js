@@ -117,13 +117,9 @@ module.exports = {
   //   }
   // }
 
-  contracts_directory: './ethereum/contracts/',
-  contracts_build_directory: './ethereum/abis/',
-  test_directory: './ethereum/test/',
-  migrations_directory: './ethereum/migrations/'
-<<<<<<< HEAD
+  contracts_directory: './src/ethereum/contracts/',
+  contracts_build_directory: './src/ethereum/abis/',
+  test_directory: './src/ethereum/test/',
+  migrations_directory: './src/ethereum/migrations/'
   
-=======
-
->>>>>>> e23072ab45ec9629434ae2acdcdb080875edbbe2
 };

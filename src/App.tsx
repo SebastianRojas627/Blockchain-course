@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { connectWallet, initialize } from "./ethereum/web3";
 
 function App() {
+
+  useEffect( () => {
+    //@ts-ignore
+    if(window.web3) {
+      initialize()
+    }
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,18 +19,8 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-<<<<<<< HEAD
-          Hi React, Truffle, Firebase
-=======
-          Hi Truffle, React, Firebase
->>>>>>> e23072ab45ec9629434ae2acdcdb080875edbbe2
-        </a>
+        <p>Hi React, Truffle, Firebase</p>
+        <button onClick={() => connectWallet()}>Connect</button>
       </header>
     </div>
   );
