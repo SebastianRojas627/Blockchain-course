@@ -10,10 +10,11 @@ function App() {
   const [manager, setManager] = useState<any>([]);
   const [players, setPlayers] = useState<any>([]);
   const [balance, setBalance] = useState<any>('');
-  // console.log(contract)
-  // setContract('nuevo valor')
+  const [value, setValue] = useState<any>('');
+  const [message, setMessage] = useState<any>('');
 
   useEffect( () => { //cuando el componente nace
+
     //@ts-ignore
     if(window.web3) {
       initialize()
@@ -51,6 +52,22 @@ function App() {
     }
   }
 
+  const onEnter =async () => {
+    
+    //@ts-ignore
+    const Web3 = window.web3;
+
+    const accounts = await Web3.eth.getAccounts()
+
+    setMessage("Waiting for transaction confirmation...")
+    await contract.methods.enter().send({
+      from: accounts[0],
+      value: Web3.utils.toWei(value, "ether")
+    })
+
+    setMessage("Correctly entered the game")
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -64,6 +81,12 @@ function App() {
         <p>PLAYERS: {players.length}</p>
         <p>BALANCE: {balance}</p>
         <p>MANAGER: {manager}</p>
+
+        <p>Monto minimo debe ser mayor a 2 eth</p>
+        <input type="text" value = {value} onChange = { (event) => {setValue(event.target.value)}}/>
+        <button onClick={ () => onEnter()}>Enter</button>
+
+        <p>{message}</p>
       </header>
     </div>
   );
