@@ -1,2 +1,1 @@
-# Blockchain-course
-A course about blockchain
+Test 2 Blockchain course
