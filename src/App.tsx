@@ -52,6 +52,20 @@ function App() {
     }
   }
 
+  const loadBalance = async () => {
+
+    //@ts-ignore
+    const Web3 = window.web3;
+    const balance = await Web3.eth.getBalance(contract.options.address)
+    setBalance(balance)
+  }
+
+  const loadPlayers = async () => {
+
+    const players = await contract.methods.getPlayers().call();
+    setPlayers(players)
+  }
+
   const onEnter =async () => {
     
     //@ts-ignore
@@ -66,6 +80,25 @@ function App() {
     })
 
     setMessage("Correctly entered the game")
+    loadBalance()
+    loadPlayers()
+  }
+
+  const onPickWinner = async () => {
+
+    //@ts-ignore
+    const Web3 = window.web3;
+    const accounts = await Web3.eth.getAccounts()
+
+    setMessage('Picking a winner...')
+    await contract.mehods.pickWinner().send({
+      from: accounts[0]
+    })
+
+    setMessage('Winner has been picked')
+    loadBalance()
+    loadPlayers()
+
   }
 
   return (
@@ -77,6 +110,8 @@ function App() {
         </p>
         <p>Hi React, Truffle, Firebase</p>
         <button onClick={() => connectWallet()}>Connect</button>
+
+        <button onClick={ () => onPickWinner()}>Pick Winner</button>
 
         <p>PLAYERS: {players.length}</p>
         <p>BALANCE: {balance}</p>
