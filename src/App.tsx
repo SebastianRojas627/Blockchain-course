@@ -109,9 +109,9 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <p>Hi React, Truffle, Firebase</p>
-        <button onClick={() => connectWallet()}>Connect</button>
+        <button onClick={() => connectWallet()} className="btn btn-success">Connect</button>
 
-        <button onClick={ () => onPickWinner()}>Pick Winner</button>
+        <button onClick={ () => onPickWinner()} className="btn btn-success">Pick Winner</button>
 
         <p>PLAYERS: {players.length}</p>
         <p>BALANCE: {balance}</p>
@@ -119,7 +119,7 @@ function App() {
 
         <p>Monto minimo debe ser mayor a 2 eth</p>
         <input type="text" value = {value} onChange = { (event) => {setValue(event.target.value)}}/>
-        <button onClick={ () => onEnter()}>Enter</button>
+        <button onClick={ () => onEnter()} className="btn btn-warning">Enter</button>
 
         <p>{message}</p>
       </header>
