@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\osina\\Documents\\VSCode\\app-react\\upb-coin\\src\\ethereum-hardhat\\contracts\\Lottery.sol": {
+      "lastModificationDate": 1654795608636,
+      "contentHash": "88acd107d6aa195d124532faedf4cdc0",
+      "sourceName": "src/ethereum-hardhat/contracts/Lottery.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Lottery"
+      ]
+    }
+  }
+}
