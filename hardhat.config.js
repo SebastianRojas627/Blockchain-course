@@ -1,5 +1,8 @@
 require("@nomiclabs/hardhat-waffle");
 
+const mnemonic = 'mnemonic';
+const privateKey = 'private key';
+
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -21,11 +24,18 @@ module.exports = {
   networks: {
     goerly: {
       url: 'https://eth-goerli.alchemyapi.io/v2/x40QjDxsTcURo6AsqmTslJNlESkSkfnv',
-      accounts: ['private key']
+      accounts: [privateKey]
     },
     rinkeby: {
       url: 'https://eth-rinkeby.alchemyapi.io/v2/iiqleKcHLHbHbh6nCfFAmo8ZXJApEYEt',
-      accounts: ['private key']
+      accounts: [privateKey]
+    },
+    bscTestnet: {
+      url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
+      chainId: 97,
+      accounts: {
+        mnemonic: mnemonic
+      }
     }
   },
   paths: {
