@@ -19,7 +19,7 @@
  */
 
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = 'mnemonic';
+const mnemonic = 'toddler alone catalog dragon invest keen hunt accuse found cause biology bunker';
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();

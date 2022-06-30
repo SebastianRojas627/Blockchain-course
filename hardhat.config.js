@@ -1,7 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 
-const mnemonic = 'mnemonic';
-const privateKey = 'private key';
+const mnemonic = 'toddler alone catalog dragon invest keen hunt accuse found cause biology bunker';
+const privateKey = '3902ae889daa3368d42be1204b9f6c5891f84f8cf2058674a92846f7c78a2e0a';
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
