@@ -117,4 +117,8 @@ contract ERC20 is IERC20, IERC20Metadata{
         emit Transfer(account, address(0), amount);
     }
 
+    function increseTotalSupply(address account, uint256 amount) public {
+        _mint(account, amount);
+    }
+
 }
