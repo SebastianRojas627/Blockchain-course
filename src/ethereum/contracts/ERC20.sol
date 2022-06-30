@@ -99,4 +99,22 @@ contract ERC20 is IERC20, IERC20Metadata{
         }
     }
 
+    function _mint(address account, uint256 amount) internal {
+        require(account != address(0), "ERC20: Mint from zero address");
+        _totalSupply += amount;
+        _balance[account] += amount;
+
+        emit Transfer(address(0), account, amount);
+    }
+
+    function _burn(address account, uint256 amount) internal {
+        require(account != address(0), "ERC20: burn from zero address");
+        uint256 accountBalance = _balance[account];
+        require(accountBalance >= amount, "ERC20: burn amount exceeds balance");
+        _balance[account] = accountBalance - amount;
+        _totalSupply -= amount;
+        
+        emit Transfer(account, address(0), amount);
+    }
+
 }
